@@ -1,0 +1,102 @@
+1) 기본 작업디렉토리 생성 및 셋업
+
+
+> mkdir zoomclone
+> cd zoomclone
+
+
+> npm init -y
+
+~\zoomclone>npm init -y
+
+> code .
+
+
+2) package.json 내용 수정 및 추가 파일 생성
+
+{
+  "name": "zoomclone",
+  "version": "1.0.0",
+  "description": "Zoom clone coding with NodeJS, WebRTC and Websockets",
+  "license": "MIT"
+}
+
+> copy con README.md
+# Noom
+Zoom clone coding with NodeJS, WebRTC and Websockets
+^Z
+
+3) nodemon 설치
+
+> npm i nodemon -D
+
+
+4) 추가 설정 파일들 생성
+
+babel.config.json
+{
+	"presets" : ["@babel/preset-env"]
+}
+
+nodemon.json
+{
+	"exec" : "babel-node src/server.js"
+}
+
+src/server.js
+
+5) > git init .
+
+6) babel 설치
+> npm i @babel/core @babel/cli @babel/node -D
+
+7) .gitignore 만들고
+/node_modules
+
+
+8) > npm i @babel/preset-env -D
+
+9) package.json 에 내용 추가
+...
+"scripts" : {
+	"dev" : "nodemon"
+},
+...
+
+
+10) express 및 pug 설치
+
+ > npm i express
+ > npm i pug
+
+ 11) src/server.js 내용 수정
+
+import express from "express";
+
+const app = express();
+console.log( 'hello');
+
+app.listen(3000);
+
+12) 실행
+> npm run dev
+
+
+
+
+
+
+
+
+
+
+
+
+git config --global user.name "Joowoong Kim"
+git config --global user.email "hisarms@puts.ac.kr"
+git remote add origin https://github.com/hisarms96/zoomclone.git
+git remote -v
+
+git add .
+git commit -m "add a" # 커밋하고
+git push # push 원격 저장소에 올리기!!

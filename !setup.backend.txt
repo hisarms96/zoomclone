@@ -87,16 +87,11 @@ app.listen(3000);
 
 
 
-
-
-
-
-
 git config --global user.name "Joowoong Kim"
 git config --global user.email "hisarms@puts.ac.kr"
 git remote add origin https://github.com/hisarms96/zoomclone.git
 git remote -v
 
 git add .
-git commit -m "add a" # 커밋하고
-git push # push 원격 저장소에 올리기!!
+git commit -m "first upload"
+git push --set-upstream origin master
